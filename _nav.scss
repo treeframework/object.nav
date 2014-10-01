@@ -7,14 +7,18 @@
 // The nav object creates navigation items out of a `ul' or `ol'.
 
 // Predefine the variables below in order to alter and enable specific features.
+$tree-nav-namespace:         $tree-namespace !default;
+
 $tree-nav-padding:           $tree-base-spacing-unit !default;
-$tree-nav-padding--tiny:     quarter($tree-nav-padding) !default;
-$tree-nav-padding--small:    halve($tree-nav-padding) !default;
-$tree-nav-padding--large:    double($tree-nav-padding) !default;
+$tree-nav-padding--tiny:       quarter($tree-nav-padding) !default;
+$tree-nav-padding--small:        halve($tree-nav-padding) !default;
+$tree-nav-padding--large:       double($tree-nav-padding) !default;
+$tree-nav-padding--huge:     quadruple($tree-nav-padding) !default;
 
 $tree-enable-nav--tiny:      false !default;
 $tree-enable-nav--small:     false !default;
 $tree-enable-nav--large:     false !default;
+$tree-enable-nav--huge:      false !default;
 $tree-enable-nav--clean:     false !default;
 $tree-enable-nav--stacked:   false !default;
 $tree-enable-nav--fit:       false !default;
@@ -24,8 +28,8 @@ $tree-enable-nav--fit:       false !default;
 
 
 // 1. Reset/normalize some styles.
-.#{$tree-namespace}nav,
-%#{$tree-namespace}nav {
+.#{$tree-nav-namespace}nav,
+%#{$tree-nav-namespace}nav {
     margin:  0;
     padding: 0;
     list-style: none;
@@ -55,8 +59,8 @@ $tree-enable-nav--fit:       false !default;
 
     // Tiny nav.
 
-    .#{$tree-namespace}nav--tiny,
-    %#{$tree-namespace}nav--tiny {
+    .#{$tree-nav-namespace}nav--tiny,
+    %#{$tree-nav-namespace}nav--tiny {
 
         li > a {
             padding: $tree-nav-padding--tiny;
@@ -66,16 +70,12 @@ $tree-enable-nav--fit:       false !default;
 
 }
 
-
-
-
-
 @if ($tree-enable-nav--small == true) {
 
     // Small nav.
 
-    .#{$tree-namespace}nav--small,
-    %#{$tree-namespace}nav--small {
+    .#{$tree-nav-namespace}nav--small,
+    %#{$tree-nav-namespace}nav--small {
 
         li > a {
             padding: $tree-nav-padding--small;
@@ -85,19 +85,30 @@ $tree-enable-nav--fit:       false !default;
 
 }
 
-
-
-
-
 @if ($tree-enable-nav--large == true) {
 
     // Large nav.
 
-    .#{$tree-namespace}nav--large,
-    %#{$tree-namespace}nav--large {
+    .#{$tree-nav-namespace}nav--large,
+    %#{$tree-nav-namespace}nav--large {
 
         li > a {
             padding: $tree-nav-padding--large;
+        }
+
+    }
+
+}
+
+@if ($tree-enable-nav--huge == true) {
+
+    // Huge nav.
+
+    .#{$tree-nav-namespace}nav--huge,
+    %#{$tree-nav-namespace}nav--huge {
+
+        li > a {
+            padding: $tree-nav-padding--huge;
         }
 
     }
@@ -112,8 +123,8 @@ $tree-enable-nav--fit:       false !default;
 
     // `.nav--clean` - removes whitespace caused by `inline-block`.
 
-    .#{$tree-namespace}nav--clean,
-    %#{$tree-namespace}nav--clean {
+    .#{$tree-nav-namespace}nav--clean,
+    %#{$tree-nav-namespace}nav--clean {
         letter-spacing: -.31em;
         word-spacing: -.43em;
         white-space: nowrap;
@@ -135,8 +146,8 @@ $tree-enable-nav--fit:       false !default;
 
     // `.nav--stacked` extends `.nav` and throws the list into vertical mode.
 
-    .#{$tree-namespace}nav--stacked,
-    %#{$tree-namespace}nav--stacked {
+    .#{$tree-nav-namespace}nav--stacked,
+    %#{$tree-nav-namespace}nav--stacked {
 
         > li {
             display: list-item;
@@ -160,8 +171,8 @@ $tree-enable-nav--fit:       false !default;
     // Force a nav to occupy 100% of the available width of its parent. Extends
     // `.nav`.
 
-    .#{$tree-namespace}nav--fit,
-    %#{$tree-namespace}nav--fit {
+    .#{$tree-nav-namespace}nav--fit,
+    %#{$tree-nav-namespace}nav--fit {
         display: table;
         width: 100%;
 
