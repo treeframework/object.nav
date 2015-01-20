@@ -27,29 +27,30 @@ $tree-enable-nav--fit:       false !default;
 
 
 
-// 1. Reset/normalize some styles.
+
 .#{$tree-nav-namespace}nav,
 %#{$tree-nav-namespace}nav {
     margin:  0;
     padding: 0;
     list-style: none;
+}
 
-    > li {
+    .#{$tree-nav-namespace}nav__item,
+    %#{$tree-nav-namespace}nav__item {
         display: inline-block;
+    }
 
-        > a {
+        .#{$tree-nav-namespace}nav__link,
+        %#{$tree-nav-namespace}nav__link {
             display: inline-block;
             padding: $tree-nav-padding;
 
-            &:hover {
-                text-decoration: none; // [1]
+            &:hover,
+            &:focus {
+                text-decoration: none;
             }
 
         }
-
-    }
-
-}
 
 
 
@@ -62,7 +63,8 @@ $tree-enable-nav--fit:       false !default;
     .#{$tree-nav-namespace}nav--tiny,
     %#{$tree-nav-namespace}nav--tiny {
 
-        li > a {
+        .#{$tree-nav-namespace}nav__link,
+        %#{$tree-nav-namespace}nav__link {
             padding: $tree-nav-padding--tiny;
         }
 
@@ -77,7 +79,8 @@ $tree-enable-nav--fit:       false !default;
     .#{$tree-nav-namespace}nav--small,
     %#{$tree-nav-namespace}nav--small {
 
-        li > a {
+        .#{$tree-nav-namespace}nav__link,
+        %#{$tree-nav-namespace}nav__link {
             padding: $tree-nav-padding--small;
         }
 
@@ -92,7 +95,8 @@ $tree-enable-nav--fit:       false !default;
     .#{$tree-nav-namespace}nav--large,
     %#{$tree-nav-namespace}nav--large {
 
-        li > a {
+        .#{$tree-nav-namespace}nav__link,
+        %#{$tree-nav-namespace}nav__link {
             padding: $tree-nav-padding--large;
         }
 
@@ -107,7 +111,8 @@ $tree-enable-nav--fit:       false !default;
     .#{$tree-nav-namespace}nav--huge,
     %#{$tree-nav-namespace}nav--huge {
 
-        li > a {
+        .#{$tree-nav-namespace}nav__link,
+        %#{$tree-nav-namespace}nav__link {
             padding: $tree-nav-padding--huge;
         }
 
@@ -129,7 +134,8 @@ $tree-enable-nav--fit:       false !default;
         word-spacing: -.43em;
         white-space: nowrap;
 
-        > li {
+        .#{$tree-nav-namespace}nav__item,
+        %#{$tree-nav-namespace}nav__item {
             letter-spacing: normal;
             word-spacing: normal;
         }
@@ -149,14 +155,15 @@ $tree-enable-nav--fit:       false !default;
     .#{$tree-nav-namespace}nav--stacked,
     %#{$tree-nav-namespace}nav--stacked {
 
-        > li {
+        .#{$tree-nav-namespace}nav__item,
+        %#{$tree-nav-namespace}nav__item {
             display: list-item;
+        }
 
-            > a {
+            .#{$tree-nav-namespace}nav__link,
+            %#{$tree-nav-namespace}nav__link {
                 display: block;
             }
-
-        }
 
     }
 
@@ -176,14 +183,15 @@ $tree-enable-nav--fit:       false !default;
         display: table;
         width: 100%;
 
-        > li {
+        .#{$tree-nav-namespace}nav__item,
+        %#{$tree-nav-namespace}nav__item {
             display: table-cell;
+        }
 
-            > a {
+            .#{$tree-nav-namespace}nav__link,
+            %#{$tree-nav-namespace}nav__link {
                 display: block;
             }
-
-        }
 
     }
 
