@@ -1,8 +1,18 @@
-# The nav object
+# Nav
 
-The `nav` object is clone of [inuit.css] (https://github.com/csswizardry/inuit.css) -
-[objects.nav] (https://github.com/csswizardry/inuit.css/blob/master/objects/_nav.scss) <q>simple creates navigation items out of a `ul` or `ol`</q>.
+The `nav` object is simple creates navigation items out of a `ul` or `ol`.
 
+Install using bower:
+
+```sh
+$ bower install tree-nav --save
+```
+
+Install using npm:
+
+```sh
+$ npm install tree-nav --save
+```
 
 ## Credits
 
