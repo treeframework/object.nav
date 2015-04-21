@@ -1,12 +1,39 @@
-// *************************************
+// =============================================================================
 //
-//   #NAV
+// Name:          Nav
 //
-// *************************************
+// Description:   Navigation items out of a `ul` or `ol`.
+//
+// Block:         `o-nav`
+//
+// Elements:      `o-nav__title`
+//                `o-nav__link`
+//
+// Modifiers:     `o-nav--tiny`
+//                `o-nav--small`
+//                `o-nav--large`
+//                `o-nav--huge`
+//                `o-nav--clean`
+//                `o-nav--stacked`
+//                `o-nav--fit`
+//
+// Markup:
+//
+// <div class="o-nav  o-nav--tiny">
+//     <div class="o-nav__title"></div>
+// </div>
+//
+// =============================================================================
 
-// The nav object creates navigation items out of a `ul' or `ol'.
+
+
+
+
+// Variables
+// =============================================================================
 
 // Predefine the variables below in order to alter and enable specific features.
+
 $tree-nav-namespace:         $tree-namespace !default;
 
 $tree-nav-padding:           $tree-base-spacing-unit !default;
@@ -27,21 +54,30 @@ $tree-enable-nav--fit:       false !default;
 
 
 
+// =============================================================================
+// Block: `o-nav`
+// =============================================================================
 
-.#{$tree-nav-namespace}nav,
-%#{$tree-nav-namespace}nav {
+.#{$tree-nav-namespace}o-nav,
+%#{$tree-nav-namespace}o-nav {
     margin:  0;
     padding: 0;
     list-style: none;
 }
 
-    .#{$tree-nav-namespace}nav__item,
-    %#{$tree-nav-namespace}nav__item {
+    // Element: `o-nav__item`
+    // =========================================================================
+
+    .#{$tree-nav-namespace}o-nav__item,
+    %#{$tree-nav-namespace}o-nav__item {
         display: inline-block;
     }
 
-        .#{$tree-nav-namespace}nav__link,
-        %#{$tree-nav-namespace}nav__link {
+        // Element: `o-nav__link`
+        // =====================================================================
+
+        .#{$tree-nav-namespace}o-nav__link,
+        %#{$tree-nav-namespace}o-nav__link {
             display: inline-block;
             padding: $tree-nav-padding;
 
@@ -55,16 +91,16 @@ $tree-enable-nav--fit:       false !default;
 
 
 
+// Modifier: `o-nav--tiny`
+// =============================================================================
 
 @if ($tree-enable-nav--tiny == true) {
 
-    // Tiny nav.
+    .#{$tree-nav-namespace}o-nav--tiny,
+    %#{$tree-nav-namespace}o-nav--tiny {
 
-    .#{$tree-nav-namespace}nav--tiny,
-    %#{$tree-nav-namespace}nav--tiny {
-
-        .#{$tree-nav-namespace}nav__link,
-        %#{$tree-nav-namespace}nav__link {
+        .#{$tree-nav-namespace}o-nav__link,
+        %#{$tree-nav-namespace}o-nav__link {
             padding: $tree-nav-padding--tiny;
         }
 
@@ -72,15 +108,16 @@ $tree-enable-nav--fit:       false !default;
 
 }
 
+// Modifier: `o-nav--small`
+// =============================================================================
+
 @if ($tree-enable-nav--small == true) {
 
-    // Small nav.
+    .#{$tree-nav-namespace}o-nav--small,
+    %#{$tree-nav-namespace}o-nav--small {
 
-    .#{$tree-nav-namespace}nav--small,
-    %#{$tree-nav-namespace}nav--small {
-
-        .#{$tree-nav-namespace}nav__link,
-        %#{$tree-nav-namespace}nav__link {
+        .#{$tree-nav-namespace}o-nav__link,
+        %#{$tree-nav-namespace}o-nav__link {
             padding: $tree-nav-padding--small;
         }
 
@@ -88,15 +125,16 @@ $tree-enable-nav--fit:       false !default;
 
 }
 
+// Modifier: `o-nav--large`
+// =============================================================================
+
 @if ($tree-enable-nav--large == true) {
 
-    // Large nav.
+    .#{$tree-nav-namespace}o-nav--large,
+    %#{$tree-nav-namespace}o-nav--large {
 
-    .#{$tree-nav-namespace}nav--large,
-    %#{$tree-nav-namespace}nav--large {
-
-        .#{$tree-nav-namespace}nav__link,
-        %#{$tree-nav-namespace}nav__link {
+        .#{$tree-nav-namespace}o-nav__link,
+        %#{$tree-nav-namespace}o-nav__link {
             padding: $tree-nav-padding--large;
         }
 
@@ -104,15 +142,16 @@ $tree-enable-nav--fit:       false !default;
 
 }
 
+// Modifier: `o-nav--huge`
+// =============================================================================
+
 @if ($tree-enable-nav--huge == true) {
 
-    // Huge nav.
+    .#{$tree-nav-namespace}o-nav--huge,
+    %#{$tree-nav-namespace}o-nav--huge {
 
-    .#{$tree-nav-namespace}nav--huge,
-    %#{$tree-nav-namespace}nav--huge {
-
-        .#{$tree-nav-namespace}nav__link,
-        %#{$tree-nav-namespace}nav__link {
+        .#{$tree-nav-namespace}o-nav__link,
+        %#{$tree-nav-namespace}o-nav__link {
             padding: $tree-nav-padding--huge;
         }
 
@@ -120,22 +159,19 @@ $tree-enable-nav--fit:       false !default;
 
 }
 
-
-
-
+// Modifier: `o-nav--clean`
+// =============================================================================
 
 @if ($tree-enable-nav--clean == true) {
 
-    // `.nav--clean` - removes whitespace caused by `inline-block`.
-
-    .#{$tree-nav-namespace}nav--clean,
-    %#{$tree-nav-namespace}nav--clean {
+    .#{$tree-nav-namespace}o-nav--clean,
+    %#{$tree-nav-namespace}o-nav--clean {
         letter-spacing: -.31em;
         word-spacing: -.43em;
         white-space: nowrap;
 
-        .#{$tree-nav-namespace}nav__item,
-        %#{$tree-nav-namespace}nav__item {
+        .#{$tree-nav-namespace}o-nav__item,
+        %#{$tree-nav-namespace}o-nav__item {
             letter-spacing: normal;
             word-spacing: normal;
         }
@@ -144,24 +180,21 @@ $tree-enable-nav--fit:       false !default;
 
 }
 
-
-
-
+// Modifier: `o-nav--stacked`
+// =============================================================================
 
 @if ($tree-enable-nav--stacked == true) {
 
-    // `.nav--stacked` extends `.nav` and throws the list into vertical mode.
+    .#{$tree-nav-namespace}o-nav--stacked,
+    %#{$tree-nav-namespace}o-nav--stacked {
 
-    .#{$tree-nav-namespace}nav--stacked,
-    %#{$tree-nav-namespace}nav--stacked {
-
-        .#{$tree-nav-namespace}nav__item,
-        %#{$tree-nav-namespace}nav__item {
+        .#{$tree-nav-namespace}o-nav__item,
+        %#{$tree-nav-namespace}o-nav__item {
             display: list-item;
         }
 
-            .#{$tree-nav-namespace}nav__link,
-            %#{$tree-nav-namespace}nav__link {
+            .#{$tree-nav-namespace}o-nav__link,
+            %#{$tree-nav-namespace}o-nav__link {
                 display: block;
             }
 
@@ -169,27 +202,23 @@ $tree-enable-nav--fit:       false !default;
 
 }
 
-
-
-
+// Modifier: `o-nav--fit`
+// =============================================================================
 
 @if ($tree-enable-nav--fit == true) {
 
-    // Force a nav to occupy 100% of the available width of its parent. Extends
-    // `.nav`.
-
-    .#{$tree-nav-namespace}nav--fit,
-    %#{$tree-nav-namespace}nav--fit {
+    .#{$tree-nav-namespace}o-nav--fit,
+    %#{$tree-nav-namespace}o-nav--fit {
         display: table;
         width: 100%;
 
-        .#{$tree-nav-namespace}nav__item,
-        %#{$tree-nav-namespace}nav__item {
+        .#{$tree-nav-namespace}o-nav__item,
+        %#{$tree-nav-namespace}o-nav__item {
             display: table-cell;
         }
 
-            .#{$tree-nav-namespace}nav__link,
-            %#{$tree-nav-namespace}nav__link {
+            .#{$tree-nav-namespace}o-nav__link,
+            %#{$tree-nav-namespace}o-nav__link {
                 display: block;
             }
 
