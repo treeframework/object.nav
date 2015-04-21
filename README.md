@@ -44,7 +44,7 @@ $ git submodule add git@github.com:treeframework/object.nav.git
 Once installed, `@import` into your project in its Object layer:
 
 ```scss
-@import "object.spacing/object.spacing";
+@import "object.nav/object.nav";
 ```
 
 ### Install via file download
@@ -60,10 +60,10 @@ Basic usage of the Nav object uses the required classes:
 ```html
 <ul class="o-nav">
     <li class="o-nav__item">
-        <a class="o-nav__link" href="#>Foo</a>
+        <a class="o-nav__link" href="#">Foo</a>
     </li>
     <li class="o-nav__item">
-        <a class="o-nav__link" href="#>Bar</a>
+        <a class="o-nav__link" href="#">Bar</a>
     </li>
 </ul>
 ```
@@ -82,10 +82,10 @@ For example:
 ```html
 <ul class="o-nav  o-nav--stacked">
     <li class="o-nav__item">
-        <a class="o-nav__link" href="#>Foo</a>
+        <a class="o-nav__link" href="#">Foo</a>
     </li>
     <li class="o-nav__item">
-        <a class="o-nav__link" href="#>Bar</a>
+        <a class="o-nav__link" href="#">Bar</a>
     </li>
 </ul>
 ```
