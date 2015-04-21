@@ -1,7 +1,7 @@
 {
   "name": "tree-nav",
   "description": "A simple nav object.",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "author": "Ilia Kolev <info@iliakolev.com>",
   "bugs": {
     "url": "https://github.com/treeframework/object.nav/issues"
@@ -12,8 +12,8 @@
   },
   "homepage": "https://github.com/treeframework/object.nav",
   "keywords": [
-    "oocss",
-    "css"
+    "css",
+    "oocss"
   ],
   "license": "MIT",
   "main": "_object.nav.scss",
