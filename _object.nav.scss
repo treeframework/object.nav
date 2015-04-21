@@ -6,7 +6,7 @@
 //
 // Block:         `o-nav`
 //
-// Elements:      `o-nav__title`
+// Elements:      `o-nav__item`
 //                `o-nav__link`
 //
 // Modifiers:     `o-nav--tiny`
@@ -19,9 +19,14 @@
 //
 // Markup:
 //
-// <div class="o-nav  o-nav--tiny">
-//     <div class="o-nav__title"></div>
-// </div>
+// <ul class="o-nav">
+//     <li class="o-nav__item">
+//         <a class="o-nav__link" href="#">Foo</a>
+//     </li>
+//     <li class="o-nav__item">
+//         <a class="o-nav__link" href="#">Bar</a>
+//     </li>
+// </ul>
 //
 // =============================================================================
 
