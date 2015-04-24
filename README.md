@@ -9,13 +9,13 @@ The `nav` object depends on two other modules:
 * [settings.defaults](https://github.com/treeframework/settings.defaults)
 * [tools.functions](https://github.com/treeframework/tools.functions)
 
-If you install the `nav` object using Bower, you will get these dependencies at
-the same time. If not using Bower, please be sure to install and `@import` these
-dependencies in the relevant way.
+If you install the `nav` object using Bower or npm, you will get these 
+dependencies at the same time. If not using Bower or npm, please be sure to 
+install and `@import` these dependencies in the relevant way.
 
 ## Installation
 
-You can install `nav` object via Bower, npm, Git Submodule, or copy and paste.
+You can install `nav` object via Bower, npm, or copy and paste.
 
 ### Install using bower:
 
@@ -33,18 +33,6 @@ Once installed, `@import` into your project in its Object layer:
 
 ```sh
 $ npm install tree-nav --save
-```
-
-### Install as a Git Submodule:
-
-```sh
-$ git submodule add git@github.com:treeframework/object.nav.git
-```
-
-Once installed, `@import` into your project in its Object layer:
-
-```scss
-@import "object.nav/object.nav";
 ```
 
 ### Install via file download
