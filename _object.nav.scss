@@ -161,8 +161,9 @@ $tree-enable-nav--fit:       false !default;
 @if ($tree-enable-nav--clean == true) {
 
     // Modifier: `o-nav--clean`
-    // Removes whitespace caused by `inline-block`.
     // =========================================================================
+
+    // Removes whitespace caused by `inline-block`.
 
     .#{$tree-nav-namespace}o-nav--clean {
         letter-spacing: -.31em;
@@ -185,8 +186,9 @@ $tree-enable-nav--fit:       false !default;
 @if ($tree-enable-nav--stacked == true) {
 
     // Modifier: `o-nav--stacked`
-    // Extends `.o-nav` and throws the list into vertical mode.
     // =========================================================================
+
+    // Extends `.o-nav` and throws the list into vertical mode.
 
     .#{$tree-nav-namespace}o-nav--stacked {
 
@@ -209,8 +211,9 @@ $tree-enable-nav--fit:       false !default;
 @if ($tree-enable-nav--fit == true) {
 
     // Modifier: `o-nav--fit`
-    // Force a nav to occupy 100% of the available width of its parent.
     // =========================================================================
+
+    // Force a nav to occupy 100% of the available width of its parent.
 
     .#{$tree-nav-namespace}o-nav--fit {
         display: table;
